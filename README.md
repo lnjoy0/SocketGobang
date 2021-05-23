@@ -14,5 +14,4 @@
 ![image](https://user-images.githubusercontent.com/58203257/119249879-d9ffa900-bbce-11eb-9b0e-72c2cc149a1e.png)
 ![image](https://user-images.githubusercontent.com/58203257/119249906-16cba000-bbcf-11eb-923d-b5272a1827d0.png)
 ![image](https://user-images.githubusercontent.com/58203257/119249910-1df2ae00-bbcf-11eb-8a97-9a240ea8557b.png)
-![image](https://user-images.githubusercontent.com/58203257/119249917-26e37f80-bbcf-11eb-88b9-75c00b19a812.png)
 ![image](https://user-images.githubusercontent.com/58203257/119249926-382c8c00-bbcf-11eb-9655-adaa1caa636a.png)
