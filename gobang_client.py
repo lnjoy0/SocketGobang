@@ -80,6 +80,7 @@ def main(screen, sk):
     winfont = pygame.font.SysFont("SimHei", 70)
     start_time = time.time()
     remain_timeout = 3
+    rival_remain_timeout = 3
     winer = 0
     round_this = 1
     piece_color = 2
@@ -126,15 +127,22 @@ def main(screen, sk):
         if winer == 0:
             countdown = math.ceil(30-(time.time()-start_time)) #倒计时
         if countdown == 0:
-            if remain_timeout > 0:
-                remain_timeout -= 1
-                start_time = time.time()
-            else:
-                if round_this == piece_color:
+            if round_this == piece_color:
+                if remain_timeout > 0:
+                    remain_timeout -= 1
+                    start_time = time.time()
+                else:
                     winer = rival_piece_color
-                elif round_this == rival_piece_color:
+            elif round_this == rival_piece_color:
+                if rival_remain_timeout > 0:
+                    rival_remain_timeout -= 1
+                    start_time = time.time()
+                else:
                     winer = piece_color
-        draw_screen(screen, countdown, remain_timeout, round_this, piece_color)
+        if round_this == piece_color:
+            draw_screen(screen, countdown, remain_timeout, round_this, piece_color)
+        elif round_this == rival_piece_color:
+            draw_screen(screen, countdown, rival_remain_timeout, round_this, piece_color)
         for i,row in enumerate(board): #画棋子
             for j,point in enumerate(row):
                 if point == 1:
@@ -324,4 +332,3 @@ if __name__ == '__main__':
     ready_screen(screen, remote_ip, remote_port, sk)
     while True:
         main(screen, sk)
-    
